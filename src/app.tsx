@@ -1,30 +1,21 @@
 import React from "react";
 
-import {TEST} from "@test/redux/src/index";
+//import {TEST} from "@test/redux/src";
+import {TEST, Song} from "@test/redux/dist";
 
-
-export const enum WORKS {
-    MAJOR = "major"
-}
-
-console.log(WORKS.MAJOR);
-
-type IFoo = {
-    type: TEST.MINOR|TEST.MAJOR;
-    name: string;
-};
-
-const foo: IFoo = {
-    type: TEST.MINOR,
-    name: "Full Name"
+const foo: Song = {
+    key: TEST.MINOR
 };
 
 class App extends React.Component {
     render(): React.ReactNode {
         console.log(TEST.MINOR);
+        if (foo.key !== TEST.MAJOR) {
+            return null;
+        }
         return (
             <div>
-                Hello {foo.type === TEST.MINOR ? foo.name : "World"}
+                Hello {foo.attributeOnlyOnMinorKey}
             </div>
         );
     }
