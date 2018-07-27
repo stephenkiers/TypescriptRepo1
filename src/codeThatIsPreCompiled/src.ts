@@ -3,7 +3,6 @@ export const enum TEST {
     MINOR = "minor"
 }
 
-
 interface IMajorKey {
     key: TEST.MAJOR;
 }

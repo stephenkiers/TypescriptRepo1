@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
+    "outDir": "dist",
     "module": "esnext",
     "target": "es5",
     "lib": ["es6", "dom", "es2017.object", "es2016.array.include"],
     "sourceMap": true,
-    "allowJs": true,
+    "allowJs": false,
     "jsx": "react",
     "moduleResolution": "node",
     "pretty": true,
