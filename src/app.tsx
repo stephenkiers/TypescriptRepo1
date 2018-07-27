@@ -1,21 +1,19 @@
 import React from "react";
 
-//import {TEST} from "@test/redux/src";
-import {TEST, Song} from "@test/redux/dist";
+import {TEST, Song} from "./codeThatIsPreCompiled/index.js";
 
 const foo: Song = {
-    key: TEST.MINOR
+    key: TEST.MAJOR
 };
 
 class App extends React.Component {
     render(): React.ReactNode {
-        console.log(TEST.MINOR);
-        if (foo.key !== TEST.MAJOR) {
-            return null;
+        if (foo.key === TEST.MAJOR) {
+            return <div>MAJOR SONG!</div>;
         }
         return (
             <div>
-                Hello {foo.attributeOnlyOnMinorKey}
+                MINOR {foo.attributeOnlyOnMinorKey}
             </div>
         );
     }
